@@ -1,0 +1,135 @@
+/* styles.css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #060AB2;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+  
+.pair-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.pair-card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.pair-card:active {
+    transform: scale(0.97);
+    transition: transform .2;
+}
+
+.pair-card.flip {
+    transform: rotateY(180deg);
+}
+  
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 15%;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.again {
+    margin: 30px auto 30px auto;
+    width: calc(50% - 10px);
+    height: calc(12.5% - 10px);
+    background-color: #1C7CCC;
+    border: 0;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    opacity: 0;
+    animation: ani 1s forwards;
+}
+
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    margin-bottom: 100px;
+    perspective: 1000px;
+    background-color: #1C7CCC;
+}
+
+.label {
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    font-size: 16px;
+}
+
+.container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.play {
+    width: calc(25% - 10px);
+    height: calc(12.5% - 10px);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    background-color: #060AB2;
+    border: 0;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.play:active {
+    transform: scale(0.97);
+    transition: transform .2;
+}
+
+.number-style {
+    text-align: center;
+    vertical-align: center;
+    color: white;
+}
