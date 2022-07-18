@@ -77,10 +77,10 @@ function createTimer(size) {
     let timerBlock = document.createElement('div');
     timerBlock.setAttribute("style", "position: absolute; top: 10%; right: 10%; color: white; font-size: 90px;");
     timerBlock.classList.add("timer");
-    if (size * 15 % 60 < 10) {
-        timerBlock.textContent = Math.floor((size * 15 + 30) / 60) + ":0" + (size * 15 + 30) % 60;
+    if (size * 30 % 60 < 10) {
+        timerBlock.textContent = Math.floor((size * 30) / 60) + ":0" + (size * 30) % 60;
     } else {
-        timerBlock.textContent = Math.floor((size * 15 + 30) / 60) + ":" + (size * 15 + 30) % 60;
+        timerBlock.textContent = Math.floor((size * 30) / 60) + ":" + (size * 30) % 60;
     }
     document.body.append(timerBlock);
 }
@@ -167,7 +167,7 @@ function playWidthNumbers() {
             card.style.order = randomInd;
         });
     })();
-    let setTime = (size * 15 + 30) - 1;
+    let setTime = (size * 30) - 1;
     console.log(setTime);
     let timer = document.querySelector(".timer");
     let time = setInterval(() => {
