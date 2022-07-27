@@ -16,7 +16,7 @@ function createImgCards() {
     cards.forEach(card => {
         let img = document.createElement('img');
         img.classList.add('back-face');
-        img.setAttribute('src', '/img/js-badge.svg');
+        img.setAttribute('src', 'img/js-badge.svg');
         img.setAttribute('alt', 'pair-card');
         card.append(img);
     });
@@ -27,7 +27,7 @@ function createImgCards() {
         for (let i = 0; i < 2; i++) {
             let img = document.createElement('img');
             img.classList.add('front-face');
-            img.setAttribute('src', '/img/' + frameworks[k] + '.svg');
+            img.setAttribute('src', 'img/' + frameworks[k] + '.svg');
             img.setAttribute('alt', frameworks[k]);
             pictures.push(img);
         }
@@ -65,7 +65,7 @@ function createNumberCards(size) {
         k++;
         let img = document.createElement('img');
         img.classList.add('back-face');
-        img.setAttribute('src', '/img/js-badge.svg');
+        img.setAttribute('src', 'img/js-badge.svg');
         img.setAttribute('alt', 'pair-card');
         card.append(img);
     });
